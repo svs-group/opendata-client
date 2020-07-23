@@ -37,7 +37,13 @@ class Object extends AbstractObject
                             $this->client->getConfig('query'),
                             [
                                 'source' => $this
-                                    ->boolSearchQuery()
+                                    ->boolSearchQuery(
+                                        [
+                                            'match' => [
+                                                'bin' => $bin,
+                                            ],
+                                        ]
+                                    )
                                     ->toString(),
                             ]
                         ),
