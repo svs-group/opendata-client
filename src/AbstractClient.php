@@ -33,7 +33,10 @@ class AbstractClient
             throw new \Exception("Api key must cannot be empty");
         }
 
-        $this->setApiKey($apiKey);
+        $this
+            ->setApiKey($apiKey)
+            ->setClient()
+        ;
     }
 
     /**

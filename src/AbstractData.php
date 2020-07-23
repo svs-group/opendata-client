@@ -2,6 +2,8 @@
 
 namespace Svs\Client\OpenData;
 
+use GuzzleHttp;
+
 /**
  * Class AbstractObject
  *
@@ -38,9 +40,9 @@ class AbstractData
     /**
      * AbstractObject constructor.
      *
-     * @param \Svs\Client\OpenData\Client $client
+     * @param \GuzzleHttp\Client $client
      */
-    public function __construct(Client $client)
+    public function __construct(GuzzleHttp\Client $client)
     {
         $this->client = $client;
     }
