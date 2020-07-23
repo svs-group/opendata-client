@@ -66,7 +66,8 @@ class AbstractClient
     {
         $this->client = new GuzzleHttp\Client(
             [
-                'base_uri' => 'https://data.egov.kz/api',
+                'base_uri' => 'https://data.egov.kz',
+                'verify'   => false,
                 'query'    => [
                     'apiKey' => $this->getApiKey(),
                 ],

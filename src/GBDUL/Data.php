@@ -38,11 +38,11 @@ class Data extends AbstractData
                             [
                                 'source' => $this
                                     ->boolSearchQuery(
-                                        [
+                                        [[
                                             'match' => [
                                                 'bin' => $bin,
                                             ],
-                                        ]
+                                        ]]
                                     )
                                     ->toString(),
                             ]

@@ -62,16 +62,27 @@ class AbstractData
             'query' => [
                 'filtered' => [
                     'query' => [
-                        'bool' => [
-                            'must'       => $must,
-                            'must_not'   => $mustNot,
-                            'should'     => $should,
-                            'should_not' => $shouldNot,
-                        ],
+                        'bool' => [],
                     ],
                 ],
             ],
         ];
+
+        if (!empty($must)) {
+            $this->query['query']['filtered']['query']['bool']['must'] = $must;
+        }
+
+        if (!empty($mustNot)) {
+            $this->query['query']['filtered']['query']['bool']['must_not'] = $mustNot;
+        }
+
+        if (!empty($shouldNot)) {
+            $this->query['query']['filtered']['query']['bool']['should_not'] = $shouldNot;
+        }
+
+        if (!empty($should)) {
+            $this->query['query']['filtered']['query']['bool']['should'] = $should;
+        }
 
         return $this;
     }
@@ -81,7 +92,7 @@ class AbstractData
      */
     protected function toString(): string
     {
-        return $this->minify($this->query);
+        return $this->minify(GuzzleHttp\json_encode($this->query));
     }
 
     /**
@@ -191,7 +202,7 @@ class AbstractData
     protected function getUrl(): string
     {
         return sprintf(
-            '/v%d/%s',
+            '/api/v%d/%s/v1',
             $this->getVersion(),
             $this->getIndexName()
         );
