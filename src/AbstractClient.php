@@ -77,11 +77,11 @@ class AbstractClient
     }
 
     /**
-     * @param $key
+     * @param string $key
      *
-     * @return $this
+     * @return mixed
      */
-    public function __get($key): AbstractClient
+    public function __get($key)
     {
         $className = sprintf("%s\%s\Data", __NAMESPACE__, strtoupper($key));
 
