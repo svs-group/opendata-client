@@ -53,7 +53,7 @@ class AbstractData
      * @param array $should
      * @param array $shouldNot
      *
-     * @return \Svs\Client\OpenData\AbstractObject
+     * @return \Svs\Client\OpenData\AbstractData
      */
     protected function boolSearchQuery($must = [], $mustNot = [], $should = [], $shouldNot = [])
     {
