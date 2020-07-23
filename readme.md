@@ -13,7 +13,7 @@ $result = $client
     ->getLegalEntityByBin('###########')
 ;
 
-echo json_encode($result->getBody()->getContent(), JSON_PRETTY_PRINT);
+echo json_encode($result->getBody()->getContents(), JSON_PRETTY_PRINT);
 ```
 
 produces (for example):
