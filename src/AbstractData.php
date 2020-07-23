@@ -7,7 +7,7 @@ namespace Svs\Client\OpenData;
  *
  * @package Svs\Client\OpenData
  */
-class AbstractObject
+class AbstractData
 {
 
     /**

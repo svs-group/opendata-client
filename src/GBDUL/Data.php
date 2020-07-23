@@ -3,7 +3,7 @@
 namespace Svs\Client\OpenData\GBDUL;
 
 use GuzzleHttp\Exception\BadResponseException;
-use Svs\Client\OpenData\AbstractObject;
+use Svs\Client\OpenData\AbstractData;
 
 /**
  * Class Object
@@ -12,7 +12,7 @@ use Svs\Client\OpenData\AbstractObject;
  *
  * @package Svs\Client\OpenData\GBDUL
  */
-class Object extends AbstractObject
+class Data extends AbstractData
 {
 
     protected $version = 4;

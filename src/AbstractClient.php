@@ -80,7 +80,7 @@ class AbstractClient
      */
     public function __get($key): AbstractClient
     {
-        $className = sprintf("%s\%s\Object", __NAMESPACE__, strtoupper($key));
+        $className = sprintf("%s\%s\Data", __NAMESPACE__, strtoupper($key));
 
         if (!class_exists($className)) {
             throw new \BadFunctionCallException(sprintf("%s class doesn't exists", $className));
