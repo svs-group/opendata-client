@@ -10,9 +10,9 @@
   "require":     {
     "php":               ">=7.3",
     "ext-json":          "*",
-    "guzzlehttp/guzzle": "~6.0"
+    "guzzlehttp/guzzle": "~7"
   },
   "require-dev": {
-    "codeception/codeception": "^2.5"
+    "codeception/codeception": "^4"
   }
 }
